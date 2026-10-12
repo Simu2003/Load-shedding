@@ -1,0 +1,1 @@
+{"status": "infeasible", "conflict": {"rule": "fuel", "shops": ["pharmacy"], "hours": ["12:00", "13:00", "14:00", "17:00", "18:00", "19:00"], "message": "Mandatory shops alone (3 kW -> 0.80 L/h) need 4.80 L over 6 outage hours; budget is 2.40 L."}}

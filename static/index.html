@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who Stays On? - generator roster</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+
+<header class="top no-print">
+  <div class="brand">
+    <h1>Who Stays On?</h1>
+    <p>Generator roster for a day of load shedding</p>
+  </div>
+  <div class="actions">
+    <button type="button" class="btn" id="btn-load">Load input</button>
+    <button type="button" class="btn" id="btn-download" disabled>Download output JSON</button>
+    <button type="button" class="btn primary" id="btn-print" disabled>Print for the door</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- shown only on paper -->
+  <div class="print-head" id="print-head" aria-hidden="true"></div>
+
+  <!-- the day: grid / outage per hour + the three limits -->
+  <section class="day no-print" id="day" aria-label="Today's conditions"></section>
+
+  <div class="busy-bar no-print" id="busy" hidden></div>
+
+  <div id="message"></div>
+  <section id="summary" aria-label="Summary"></section>
+  <section id="board-wrap" aria-label="Roster board"></section>
+  <section id="why" class="no-print" aria-label="Why each shop is dark"></section>
+
+  <footer class="api no-print">
+    <details>
+      <summary>Use this from another market (POST /api/roster)</summary>
+      <p>This screen calls the same endpoint. Send the input JSON as the body; you get the output JSON back.
+         HTTP 200 for <code>ok</code> and <code>infeasible</code>, HTTP 400 for <code>invalid_input</code>.</p>
+      <pre id="curl"></pre>
+    </details>
+  </footer>
+</main>
+
+<dialog id="loader" class="no-print">
+  <form method="dialog" id="loader-form" onsubmit="return false">
+    <h2>Load input</h2>
+    <p class="hint">Choose a file, drop one anywhere on this page, or paste the JSON below.</p>
+    <div class="loader-row">
+      <label class="btn file">Choose a JSON file
+        <input type="file" id="file" accept=".json,application/json">
+      </label>
+      <button type="button" class="btn quiet" id="btn-sample">Practice input (12 shops)</button>
+      <button type="button" class="btn quiet" id="btn-worked">Worked example (5 shops)</button>
+    </div>
+    <textarea id="json-text" spellcheck="false" aria-label="Input JSON" placeholder='{ "grid_available": [ ... ], "generator_capacity_kw": 20, ... }'></textarea>
+    <p class="field-error" id="json-error" role="alert"></p>
+    <div class="loader-foot">
+      <button type="button" class="btn quiet" id="btn-cancel">Cancel</button>
+      <button type="button" class="btn primary" id="btn-run">Make roster</button>
+    </div>
+  </form>
+</dialog>
+
+<div id="tip" role="tooltip" hidden></div>
+<div class="dropveil no-print" id="dropveil" hidden>Drop the input JSON file to plan the day</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

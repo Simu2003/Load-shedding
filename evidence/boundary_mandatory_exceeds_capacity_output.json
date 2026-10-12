@@ -1,0 +1,1 @@
+{"status": "infeasible", "conflict": {"rule": "capacity", "shops": ["pharmacy"], "hours": ["12:00", "13:00", "14:00", "17:00", "18:00", "19:00"], "message": "Mandatory shops need 11 kW together in every outage hour but the generator carries 10 kW."}}

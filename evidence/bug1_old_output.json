@@ -1,0 +1,143 @@
+{
+  "status": "ok",
+  "roster": [
+    {
+      "slot": 2,
+      "time": "12:00",
+      "powered": [
+        "pharmacy",
+        "tea_stall"
+      ],
+      "dark": [
+        {
+          "id": "tailor",
+          "reason": "Diesel: adding it moves load 4->8 kW, this hour 0.80->1.60 L; day total would be 8.80 L > budget 8.00 L. Those litres earn more value in other hours. Dark run so far: 1 (max 2)."
+        },
+        {
+          "id": "mobile",
+          "reason": "Diesel: adding it moves load 4->7 kW, this hour 0.80->1.20 L; day total would be 8.40 L > budget 8.00 L. Those litres earn more value in other hours. Dark run so far: 1 (max 2)."
+        },
+        {
+          "id": "photocopy",
+          "reason": "Diesel: adding it moves load 4->6 kW, this hour 0.80->1.20 L; day total would be 8.40 L > budget 8.00 L. Those litres earn more value in other hours. Dark run so far: 1 (max 2)."
+        }
+      ],
+      "load_kw": 4,
+      "fuel_litres": 0.8,
+      "fuel_cumulative_litres": 0.8
+    },
+    {
+      "slot": 3,
+      "time": "13:00",
+      "powered": [
+        "pharmacy",
+        "mobile",
+        "tea_stall"
+      ],
+      "dark": [
+        {
+          "id": "tailor",
+          "reason": "Capacity: adding it would raise the load from 7 kW to 11 kW, above the 10 kW generator limit. Dark run so far: 2 (max 2)."
+        },
+        {
+          "id": "photocopy",
+          "reason": "Diesel: adding it moves load 7->9 kW, this hour 1.20->1.60 L; day total would be 8.40 L > budget 8.00 L. Those litres earn more value in other hours. Dark run so far: 2 (max 2)."
+        }
+      ],
+      "load_kw": 7,
+      "fuel_litres": 1.2,
+      "fuel_cumulative_litres": 2.0
+    },
+    {
+      "slot": 4,
+      "time": "14:00",
+      "powered": [
+        "pharmacy",
+        "tailor",
+        "photocopy",
+        "tea_stall"
+      ],
+      "dark": [
+        {
+          "id": "mobile",
+          "reason": "Capacity: adding it would raise the load from 10 kW to 13 kW, above the 10 kW generator limit. Dark run so far: 1 (max 2)."
+        }
+      ],
+      "load_kw": 10,
+      "fuel_litres": 1.6,
+      "fuel_cumulative_litres": 3.6
+    },
+    {
+      "slot": 7,
+      "time": "17:00",
+      "powered": [
+        "pharmacy",
+        "tailor",
+        "photocopy",
+        "tea_stall"
+      ],
+      "dark": [
+        {
+          "id": "mobile",
+          "reason": "Capacity: adding it would raise the load from 10 kW to 13 kW, above the 10 kW generator limit. Dark run so far: 1 (max 2)."
+        }
+      ],
+      "load_kw": 10,
+      "fuel_litres": 1.6,
+      "fuel_cumulative_litres": 5.2
+    },
+    {
+      "slot": 8,
+      "time": "18:00",
+      "powered": [
+        "pharmacy",
+        "mobile",
+        "tea_stall"
+      ],
+      "dark": [
+        {
+          "id": "tailor",
+          "reason": "Capacity: adding it would raise the load from 7 kW to 11 kW, above the 10 kW generator limit. Dark run so far: 1 (max 2)."
+        },
+        {
+          "id": "photocopy",
+          "reason": "Diesel: adding it moves load 7->9 kW, this hour 1.20->1.60 L; day total would be 8.40 L > budget 8.00 L. Those litres earn more value in other hours. Dark run so far: 1 (max 2)."
+        }
+      ],
+      "load_kw": 7,
+      "fuel_litres": 1.2,
+      "fuel_cumulative_litres": 6.4
+    },
+    {
+      "slot": 9,
+      "time": "19:00",
+      "powered": [
+        "pharmacy",
+        "tailor",
+        "mobile"
+      ],
+      "dark": [
+        {
+          "id": "photocopy",
+          "reason": "Capacity: adding it would raise the load from 10 kW to 12 kW, above the 10 kW generator limit. Dark run so far: 2 (max 2)."
+        },
+        {
+          "id": "tea_stall",
+          "reason": "Capacity: adding it would raise the load from 10 kW to 11 kW, above the 10 kW generator limit. Dark run so far: 1 (max 2)."
+        }
+      ],
+      "load_kw": 10,
+      "fuel_litres": 1.6,
+      "fuel_cumulative_litres": 8.0
+    }
+  ],
+  "value_total": 81,
+  "fuel_total_litres": 8.0,
+  "dark_hours": {
+    "pharmacy": 0,
+    "tailor": 3,
+    "mobile": 3,
+    "photocopy": 4,
+    "tea_stall": 1
+  }
+}
